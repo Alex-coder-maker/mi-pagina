@@ -1,0 +1,215 @@
+/* ==========================================================
+   RESET BÁSICO Y ESTILOS BASE
+   ========================================================== */
+   * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.6;
+    color: #2c2c2c;
+    background-color: #f4f1ea;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1a2530;
+    margin-bottom: 12px;
+}
+
+p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    text-align: justify;
+}
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+header {
+    background-color: #1a2530;
+    color: #ffffff;
+    text-align: center;
+    padding: 50px 20px;
+    border-bottom: 5px solid #8b0000;
+}
+
+header span {
+    background-color: #8b0000;
+    color: #ffffff;
+    padding: 5px 12px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    display: inline-block;
+    border-radius: 3px;
+}
+
+header h1 {
+    color: #ffffff;
+    font-size: 30px;
+    margin: 15px 0;
+}
+
+header p {
+    font-size: 17px;
+    text-align: center;
+    color: #e0e0e0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ==========================================================
+   ESTRUTURA DE MAIN Y SECCIONES
+   ========================================================== */
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+section {
+    background-color: #ffffff;
+    padding: 30px;
+    margin-bottom: 30px;
+    border: 1px solid #e0dcd3;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Clearfix tradicional sin clases */
+section::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+section h2 {
+    font-size: 22px;
+    border-bottom: 2px solid #8b0000;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    color: #8b0000;
+}
+
+/* ==========================================================
+   MAQUETACIÓN POR ETIQUETAS (ARTICLE Y ASIDE)
+   ========================================================== */
+/* Article a la izquierda por defecto */
+article {
+    width: 58%;
+    display: inline-block;
+    vertical-align: top;
+    float: left;
+}
+
+/* Aside a la derecha por defecto */
+aside {
+    width: 38%;
+    display: inline-block;
+    vertical-align: top;
+    float: right;
+    text-align: center;
+}
+
+/* Ajustes especiales para Secciones de 50%/50% */
+section:nth-of-type(2) article,
+section:nth-of-type(2) aside,
+section:nth-of-type(5) article,
+section:nth-of-type(5) aside {
+    width: 48%;
+}
+
+/* Inversión para la sección 3 (aside a la izquierda, article a la derecha) */
+section:nth-of-type(3) aside {
+    float: left;
+}
+section:nth-of-type(3) article {
+    float: right;
+}
+
+/* ==========================================================
+   IMÁGENES, CITA Y VIDEO
+   ========================================================== */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: 4px solid #f4f1ea;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+figcaption {
+    font-size: 13px;
+    color: #666;
+    font-style: italic;
+    margin-top: 8px;
+    display: block;
+}
+
+blockquote {
+    background-color: #fcf8f2;
+    border-left: 4px solid #8b0000;
+    padding: 15px;
+    margin: 15px 0;
+    font-style: italic;
+    color: #555;
+    text-align: left;
+}
+
+/* Video Embebido Adaptable */
+aside div {
+    position: relative;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 15px;
+    background-color: #000;
+}
+
+aside iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Enlaces estilo botón */
+a {
+    display: inline-block;
+    background-color: #8b0000;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+a:hover {
+    background-color: #660000;
+}
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+footer {
+    background-color: #1a2530;
+    color: #a0aec0;
+    text-align: center;
+    padding: 25px 10px;
+    font-size: 14px;
+    border-top: 4px solid #8b0000;
+}
+
+footer p {
+    text-align: center;
+    margin-bottom: 5px;
+}
